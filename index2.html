@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bubbel sort</title>
+</head>
+<body>
+
+
+<!-- generate a bubbel sort -->
+
+    <script>
+        function bubbleSort(array) {
+    var len = array.length;
+    var swapped;
+    
+    do {
+      swapped = false;
+      
+      for (var i = 0; i < len - 1; i++) {
+        if (array[i] > array[i + 1]) {
+          // Swap elements
+          var temp = array[i];
+          array[i] = array[i + 1];
+          array[i + 1] = temp;
+          
+          swapped = true;
+        }
+      }
+    } while (swapped);
+    
+    return array;
+  }
+  
+  // Example usage:
+  var arr = [5, 3, 8, 4, 2];
+  alert("Original Array: " + arr);
+  var sortedArr = bubbleSort(arr);
+  alert("Sorted Array: " + sortedArr);
+  
+    </script>
+    
+</body>
+</html>
